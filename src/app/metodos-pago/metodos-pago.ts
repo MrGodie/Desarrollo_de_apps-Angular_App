@@ -48,6 +48,7 @@ export class MetodosPago extends AppReport implements OnInit {
     this.showModal = false;
     this.metodoPago = null;
     this.modalTitle = '';
+    
   }
 
   saveEvent(metodoPago: MetodoPago) {
