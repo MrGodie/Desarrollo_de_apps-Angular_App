@@ -1,0 +1,21 @@
+.num-records{
+    font-size: 10pt;
+    text-align: center;
+    width: 100%;
+}
+.add-button{
+    background: url('/assets/i18n/icons/add-circle-svgrepo-com.svg') no-repeat center;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+}
+.edit-button{
+    background: url('/assets/i18n/icons/edit-circle.svg') no-repeat center;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+}
+.modal-background{
+    background-color: rgb(0, 0, 0, 0.5);
+
+}

@@ -1,0 +1,54 @@
+{
+    "views":{
+      "productos": "Productos",
+      "categorias": "Categorias",
+      "unidades-de-medida": "Unidades de Medida", 
+      "proveedores": "Proveedores", 
+      "metodos-pago": "Metodos de Pago",
+      "compras": "Compras",
+      "ventas": "Ventas",
+      "inventario": "Inventario",
+      "movimientos-inventario": "Movimientos de Inventario",
+      "apertura-caja": "Apertura de Caja",
+      "cierre-caja": "Cierre de Caja",
+      "otros-movimientos": "Otros Movimientos",
+      "usuarios": "Usuarios"
+    },
+    "menu":{
+        "catalogos-generales": "Catálogos Generales",
+        "procesos": "Procesos",
+        "administracion": "Administración",
+        "punto-de-venta": "Punto de Venta"
+
+    },
+    "buttons":{
+     "add-new": "Agregar",
+     "edit": "Editar",
+     "delete": "Eliminar",
+     "save": "Guardar",
+     "cancel":"Cancelar",
+     "aceptar": "Aceptar"
+    },
+
+    "categorias":{
+      "name": "Nombre",
+      "description":"Descripcion",
+      "add-category": "Agregar Categoria",
+      "edit-category": "Editar Categoria"
+    },
+    "metodosPago":{
+      "name": "Nombre",
+      "description":"Descripcion",
+      "add-metodo-pago": "Agregar Metodo de Pago",
+      "edit-metodo-pago": "Editar Metodo de Pago"
+    },
+
+    "labels":{
+      "num-records":"Número de Categorias",
+      "required-field":"El campo es obligatorio"
+    },
+    "messages":{
+      "succes":"Exito",
+      "save-succes": "Se guardo exitosamente"
+    }
+}

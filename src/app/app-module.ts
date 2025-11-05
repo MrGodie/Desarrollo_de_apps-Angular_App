@@ -1,0 +1,67 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { App } from './app';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { routes } from './app.routes';
+import { TranslocoRootModule } from './transloco-root.module';
+import { Categorias } from './categorias/categorias';
+import { AperturaCaja } from './apertura-caja/apertura-caja';
+import { CierreCaja } from './cierre-caja/cierre-caja';
+import { Compras } from './compras/compras';
+import { Inventario } from './inventario/inventario';
+import { Home } from './home/home';
+import { MetodosPago } from './metodos-pago/metodos-pago';
+import { OtrosMovimientos } from './otros-movimientos/otros-movimientos';
+import { MovimientoInventario } from './movimiento-inventario/movimiento-inventario';
+import { Productos } from './productos/productos';
+import { Proveedores } from './proveedores/proveedores';
+import { PuntoVenta } from './punto-venta/punto-venta';
+import { UnidadesMedida } from './unidades-medida/unidades-medida';
+import { Usuarios } from './usuarios/usuarios';
+import { Ventas } from './ventas/ventas';
+import { CategoriaModalComponent } from './categorias/categoria-modal/categoria-modal.component';
+import { MessageComponent } from "./message/message.component";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MetodoPagoModalComponent } from "./metodos-pago/metodo-pago-modal/metodo-pago-modal.component";
+
+
+
+
+@NgModule({
+  declarations: [
+    App,
+    Categorias,
+    CategoriaModalComponent,
+    MessageComponent,
+    MetodosPago,
+    MetodoPagoModalComponent
+    /* Descomentar los que usas en rutas
+    CierreCaja,
+    AperturaCaja,
+    Compras,
+    Home,
+    Inventario,
+    MovimientoInventario,
+    OtrosMovimientos,
+    Productos,
+    Proveedores,
+    PuntoVenta,
+    UnidadesMedida,
+    Usuarios,
+    Ventas
+    */
+  ],
+  imports: [
+    BrowserModule,
+    CommonModule,
+    HttpClientModule,
+    RouterModule.forRoot(routes),
+    TranslocoRootModule,
+    FormsModule,
+    ReactiveFormsModule
+],
+  bootstrap: [App]
+})
+export class AppModule { }
