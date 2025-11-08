@@ -42,13 +42,20 @@
       "add-metodo-pago": "Agregar Metodo de Pago",
       "edit-metodo-pago": "Editar Metodo de Pago"
     },
+    "productos":{
+      "name": "Nombre",
+      "price": "Precio",
+      "category": "Categoria",
+      "add-producto": "Agregar Producto",
+      "edit-producto": "Editar Producto"
+    },
 
     "labels":{
       "num-records":"Número de Categorias",
       "required-field":"El campo es obligatorio"
     },
     "messages":{
-      "succes":"Exito",
-      "save-succes": "Se guardo exitosamente"
+      "success":"Exito",
+      "save-success": "Se guardo exitosamente"
     }
 }

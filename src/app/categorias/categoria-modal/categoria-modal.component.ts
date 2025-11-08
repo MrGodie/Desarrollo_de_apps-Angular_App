@@ -1,16 +1,14 @@
-import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, Output, SimpleChanges } from '@angular/core';
 import { Categoria } from '../../_class/categoria';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import { Form, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-categoria-modal',
-  standalone:  false,
+  standalone: false,
   templateUrl: './categoria-modal.component.html',
   styleUrls: ['./categoria-modal.component.css', '../../app.css']
-
 })
-export class CategoriaModalComponent implements OnChanges{
+export class CategoriaModalComponent {
 
   @Input() showModal = false;
   @Input() modalTitle = "";
@@ -18,36 +16,36 @@ export class CategoriaModalComponent implements OnChanges{
   @Output() closeModalEvent = new EventEmitter<void>();
   @Output() saveEvent = new EventEmitter<Categoria>();
 
-  formData: FormGroup 
-  edit = false;
+  formData: FormGroup;
+  edit=false;
+  
+  constructor(private builder: FormBuilder) {
 
-  constructor (private builder: FormBuilder){
     this.formData = this.builder.group({
-    id:[this.data?.id],
-    nombre: [this.data?.nombre,Validators.required],
-    descripcion: [this.data?.descripcion,Validators.required]
-    })
-  }
+      id: [this.data?.id],
+      nombre: [this.data?.nombre, Validators.required],
+      descripcion: [this.data?.descripcion, Validators.required]
+    });
+   }
 
-  ngOnChanges(changes: SimpleChanges): void {
-    if(changes['data'] && this.data){
+  ngOnChanges(Changes: SimpleChanges): void {
+    if (Changes['data'] && this.data) {
       this.edit = true;
       this.formData.patchValue(this.data);
-
-    }else{
+    } else {
       this.edit = false;
       this.formData.reset();
     }
   }
 
-  closeModal(){
+  closeModal() {
     this.closeModalEvent.emit();
   }
-
-  saveModal(){
-    if(this.formData.valid){
+  saveModal() {
+    if (this.formData.valid) {
       this.saveEvent.emit(this.formData.value);
     }
   }
 
+  
 }

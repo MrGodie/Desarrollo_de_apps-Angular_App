@@ -21,8 +21,6 @@
   </tbody>
 </table>
 
-<div class="num-records">{{metodosPago.length}} {{"labels.num-records" | transloco}}</div>
-
 <!-- Modal -->
 <app-metodo-pago-modal [showModal]="showModal" [modalTitle]="modalTitle" [data]="metodoPago" 
 (closeModalEvent)="closeModalEvent()" (saveEvent)="saveEvent($event)"></app-metodo-pago-modal>

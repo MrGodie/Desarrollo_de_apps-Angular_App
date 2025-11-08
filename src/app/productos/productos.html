@@ -1,1 +1,31 @@
-<p>productos works!</p>
+<button type="button" class="btn btn-link add-button" (click)="openAddModal()">
+</button>
+<br/>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">{{"productos.name" | transloco}}</th>
+      <th scope="col">{{"productos.price" | transloco}}</th>
+      <th scope="col">{{"productos.category" | transloco}}</th>
+      <th scope="col">&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr *ngFor="let c of productos">
+      <td>{{c.name}}</td>
+      <td>{{c.price}}</td>
+      <td>{{c.category}}</td>
+      <td>
+        <button type="button" class="btn btn-link edit-button" (click)="openAddModal()"></button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<!-- Modal -->
+
+
+<app-message [showModal]="showModalMessage" [messageTitle]="modalTitleMessage"
+[messageBody]="messageBody" (aceptar)="closeMessageModal($event)" [uri]="uri"></app-message>

@@ -12,7 +12,6 @@ import { MetodoPagoService } from '../_service/metodo-pago.service';
 })
 export class MetodosPago extends AppReport implements OnInit {
 
-
   metodosPago: MetodoPago[] = [];
   showModal= false;
   modalTitle= '';
@@ -39,7 +38,7 @@ export class MetodosPago extends AppReport implements OnInit {
   }
 
   openEditModal(metodoPago: MetodoPago) {
-    this.modalTitle = 'categorias.edit-category';
+    this.modalTitle = 'metodos.pago.edit-metodo-pago';
     this.metodoPago = metodoPago;
     this.showModal = true;
   }
@@ -47,8 +46,7 @@ export class MetodosPago extends AppReport implements OnInit {
   closeModalEvent() {
     this.showModal = false;
     this.metodoPago = null;
-    this.modalTitle = '';
-    
+    this.modalTitle = ''; 
   }
 
   saveEvent(metodoPago: MetodoPago) {
