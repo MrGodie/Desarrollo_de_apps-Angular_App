@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Producto } from '../../_class/producto';
 
 @Component({
-  selector: 'app-producto-modal.component',
+  selector: 'app-producto-modal',
   templateUrl: './producto-modal.component.html',
   styleUrls: ['./producto-modal.component.css','../../app.css'],
   standalone: false

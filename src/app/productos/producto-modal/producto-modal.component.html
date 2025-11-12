@@ -5,7 +5,7 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true"
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel"> {{"productos.edit.producto" | transloco}}</h1>
+        <h1 class="modal-title fs-5" id="staticBackdropLabel"> {{"productos.edit-category" | transloco}}</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="closeModal()"></button>
       </div>
       <div class="modal-body">
@@ -17,6 +17,7 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true"
               {{"labels.required-field" | transloco}}
             </div>
           </div>
+
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">{{"productos.price" | transloco}}</label>
             <input type="text" class="form-control" formControlName="price" id="price">
@@ -24,6 +25,7 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true"
               {{"labels.required-field" | transloco}}
             </div>
           </div>
+
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">{{"productos.category" | transloco}}</label>
             <input type="text" class="form-control" formControlName="category" id="category">

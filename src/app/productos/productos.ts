@@ -60,8 +60,8 @@ export class Productos extends AppReport implements OnInit{
 
     this.closeModalEvent();
     this.showModalMessage = true;
-    this.modalTitleMessage = "message.sucess";
-    this.messageBody = "messages.save-sucess";
+    this.modalTitleMessage = "messages.success";
+    this.messageBody = "messages.save-success";
 }
 
 

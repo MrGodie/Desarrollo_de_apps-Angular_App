@@ -17,7 +17,7 @@
       <td>{{c.price}}</td>
       <td>{{c.category}}</td>
       <td>
-        <button type="button" class="btn btn-link edit-button" (click)="openAddModal()"></button>
+        <button type="button" class="btn edit-button" (click)="openEditModal(c)"></button>
       </td>
     </tr>
   </tbody>
@@ -25,7 +25,8 @@
 
 
 <!-- Modal -->
-
+<app-producto-modal [showModal]="showModal" [modalTitle]="modalTitle" [data]="producto" 
+(closeModalEvent)="closeModalEvent()" (saveEvent)="saveEvent($event)"></app-producto-modal>
 
 <app-message [showModal]="showModalMessage" [messageTitle]="modalTitleMessage"
 [messageBody]="messageBody" (aceptar)="closeMessageModal($event)" [uri]="uri"></app-message>
